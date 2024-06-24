@@ -7,15 +7,16 @@
 
 import React from 'react';
 import type {PropsWithChildren} from 'react';
+import "react-native-devsettings";
 import {
   SafeAreaView,
   ScrollView,
   StatusBar,
   StyleSheet,
-  Text,
   useColorScheme,
   View,
 } from 'react-native';
+import Text from './node_modules/uikit/Text'
 
 import {
   Colors,
@@ -30,6 +31,7 @@ type SectionProps = PropsWithChildren<{
 }>;
 
 function Section({children, title}: SectionProps): React.JSX.Element {
+  console.log('hey there chekcing if itrs qorking')
   const isDarkMode = useColorScheme() === 'dark';
   return (
     <View style={styles.sectionContainer}>
@@ -87,7 +89,10 @@ function App(): React.JSX.Element {
             <DebugInstructions />
           </Section>
           <Section title="Learn More">
-            Read the docs to discover what to do next:
+            <Text>
+            aahna vij
+            </Text>
+            
           </Section>
           <LearnMoreLinks />
         </View>
