@@ -18,8 +18,7 @@ const globalScreens = [
             name: 'NewsFeed',
             component: NewsFeed,
            
-        }
-    
+        } 
 
 ]
 
