@@ -4,6 +4,7 @@ import React from "react";
 import { Portal } from "react-native-paper";
 import { HomeScreen } from "../modules/Home";
 import { NewsFeed } from "../modules/NewsFeed";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export const StackMore = createStackNavigator();
 export const Tab = createBottomTabNavigator();
@@ -11,19 +12,25 @@ export const Nav = () => {
 
     return (
         <>
-            {/* <SafeAreaView style={[styles.header, styles[orientation]]} />
-            <SafeAreaView style={[styles.mainHeader, styles[orientation]]}> */}
+           
+            {/* <SafeAreaView style={{flex:0}}>
+                <SafeAreaView style={{flex: 1, position: 'relative'}}> */}
                 <Portal.Host>
-                    <Tab.Navigator>
+                    <Tab.Navigator screenOptions={{ headerShown: false }}>
                         <Tab.Screen
                             name="HomeScreen"
                             component={HomeScreen}
                         />
-                            <Tab.Screen name="NewsFeed" component={NewsFeed} />
+                            <Tab.Screen name="Calender" component={NewsFeed} />
+                            <Tab.Screen name="Alerts" component={NewsFeed} />
+                            <Tab.Screen name="More" component={NewsFeed} />
+                          
                            
                     </Tab.Navigator>
                 </Portal.Host>
-            {/* </SafeAreaView> */}
+                {/* </SafeAreaView>
+                </SafeAreaView> */}
+           
         </>
     );
 }

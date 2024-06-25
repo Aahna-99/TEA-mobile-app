@@ -12,7 +12,7 @@ const Global = () => {
     const Stack = createNativeStackNavigator();
 
     let getInitialRoute = () => {
-        return 'NewsFeed';
+        return 'HomeNav';
     };
 
     let getScreens = (screen: any) => {
@@ -28,14 +28,11 @@ const Global = () => {
 
     return (
         <SafeAreaProvider>
-            {/* <LoaderContext.Provider value={{ showLoader, hideLoader }}> */}
             <NavigationContainer>
-                <Stack.Navigator initialRouteName={getInitialRoute()}>
+                <Stack.Navigator initialRouteName={getInitialRoute()} screenOptions={{ headerTitle: '', headerStyle:{ backgroundColor: '#0066DB' }}}> 
                     {screens}
                 </Stack.Navigator>
             </NavigationContainer>
-            {/* <GlobalLoader loading={loading} /> */}
-            {/* </LoaderContext.Provider> */}
         </SafeAreaProvider>
     );
 };

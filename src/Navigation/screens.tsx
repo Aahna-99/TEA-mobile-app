@@ -10,15 +10,27 @@ const globalScreens = [
            
         },
         {
-            name: 'HomeScreen',
+            name: 'Home',
             component: HomeScreen,
            
         },
         {
-            name: 'NewsFeed',
+            name: 'Newsfeed',
             component: NewsFeed,
            
-        } 
+        } ,
+        {
+            name: 'Calender',
+            component: NewsFeed
+        },
+        {
+            name:'Alerts',
+            component: NewsFeed
+        },
+        {
+            name: 'More',
+            component: NewsFeed
+        }
 
 ]
 
