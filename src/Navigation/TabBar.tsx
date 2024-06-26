@@ -4,8 +4,8 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import VectorIcon from 'react-native-vector-icons/MaterialCommunityIcons'
 import AntDesign from 'react-native-vector-icons/AntDesign'
 import { Animated, TextInput, TouchableOpacity, View, View as RNView } from 'react-native';
-import constColors from 'utils/constants/constColors';
-import Text from 'uikit/Text'
+import constColors from '../utils/constants/constColors';
+import Text from '../uikit/Text'
 import styles from './styles'
 const TabBar: React.FC<BottomTabBarProps> = ({ state, descriptors, navigation }) => {
     const tabBarIcon = ({ route, color, size }: { route: any; color: string; size: number }) => {

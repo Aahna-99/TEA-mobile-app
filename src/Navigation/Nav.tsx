@@ -21,7 +21,7 @@ export const Nav = () => {
                     screenOptions={({ route }) => ({
                         tabBarActiveTintColor: '#0166DB',
                         tabBarInactiveTintColor: '#201A1B',
-                        // headerShown: false
+                        headerShown: false
                     })}
                     tabBar={props => <TabBar {...props} />}
                 >
