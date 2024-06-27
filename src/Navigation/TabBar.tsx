@@ -12,11 +12,15 @@ import Calender from '../assets/Drawables/Calender.svg'
 import NewsFeed from '../assets/Drawables/NewsFeed.svg'
 import Alerts from '../assets/Drawables/Alerts.svg'
 import More from '../assets/Drawables/More.svg'
-import HomeSelectedIcon from '../assets/Drawables/HomeSelectedIcon'
+import HomeSelectedIcon from '../assets/Drawables/HomeSelectedIcon.svg'
+import CalenderSelectedIcon from '../assets/Drawables/CalenderSelectedIcon.svg'
+import MoreSelectedIcon from '../assets/Drawables/MoreSelectedIcon.svg'
+import AlertsSelectedIcon from '../assets/Drawables/AlertsSelectedIcon.svg'
+import NewsFeedSelectedIcon from '../assets/Drawables/NewsFeedSelectedIcon.svg'
 const TabBar: React.FC<BottomTabBarProps> = ({ state, descriptors, navigation }) => {
 
     const [selectedValue,setSelectedValue] = useState('Home')
-    
+
     const tabBarIcon = ({ route, color, size }: { route: any; color: string; size: number }) => {
         let IconComponent;
 
@@ -25,16 +29,16 @@ const TabBar: React.FC<BottomTabBarProps> = ({ state, descriptors, navigation })
                 IconComponent = selectedValue === 'Home' ? HomeSelectedIcon : HomeIcon;
                 break;
             case 'Calendar':
-                IconComponent = Calender;
+                IconComponent = selectedValue === 'Calendar' ?  CalenderSelectedIcon  :  Calender;
                 break;
             case 'Alerts':
-                IconComponent = Alerts;
+                IconComponent = selectedValue === 'Alerts' ? AlertsSelectedIcon : Alerts;
                 break;
             case 'Newsfeed':
-                IconComponent = NewsFeed;
+                IconComponent = selectedValue === 'Newsfeed' ? NewsFeedSelectedIcon :  NewsFeed;
                 break;
             case 'More':
-                IconComponent = More;
+                IconComponent = selectedValue === 'More' ?  MoreSelectedIcon : More;
                 break;
             default:
                 IconComponent = HomeIcon;
