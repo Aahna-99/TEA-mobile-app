@@ -7,34 +7,48 @@ import { Animated, TextInput, TouchableOpacity, View, View as RNView } from 'rea
 import constColors from '../utils/constants/constColors';
 import Text from '../uikit/Text'
 import styles from './styles'
+import HomeIcon from '../assets/Drawables/HomeIcon.svg'
+import Calender from '../assets/Drawables/Calender.svg'
+import NewsFeed from '../assets/Drawables/NewsFeed.svg'
+import Alerts from '../assets/Drawables/Alerts.svg'
+import More from '../assets/Drawables/More.svg'
+import HomeSelectedIcon from '../assets/Drawables/HomeSelectedIcon'
 const TabBar: React.FC<BottomTabBarProps> = ({ state, descriptors, navigation }) => {
+
+    const [selectedValue,setSelectedValue] = useState('Home')
+    
     const tabBarIcon = ({ route, color, size }: { route: any; color: string; size: number }) => {
-        let iconName;
+        let IconComponent;
 
         switch (route.name) {
             case 'Home':
-                iconName = 'home-outline';
+                IconComponent = selectedValue === 'Home' ? HomeSelectedIcon : HomeIcon;
                 break;
             case 'Calendar':
-                iconName = 'calendar-outline';
+                IconComponent = Calender;
                 break;
             case 'Alerts':
-                iconName = 'bell-ring-outline';
+                IconComponent = Alerts;
                 break;
             case 'Newsfeed':
-                iconName = 'newspaper-outline';
+                IconComponent = NewsFeed;
                 break;
             case 'More':
-                return <AntDesign name="appstore-o" size={size} color={color} />;
+                IconComponent = More;
+                break;
             default:
-                iconName = 'appstore-o';
+                IconComponent = HomeIcon;
                 break;
         }
 
-        const IconComponent = route.name === 'Alerts' ? VectorIcon : Icon;
+        return <IconComponent width={size} height={size} fill={color} />;
 
-        return <IconComponent name={iconName} size={size} color={color} />;
+        // const IconComponent = route.name === 'Alerts' ? VectorIcon : Icon;
+
+        // return <IconComponent name={iconName} size={size} color={color} />;
     };
+
+   
     const anim = useRef(new Animated.Value(0)).current;
 
     const yVal = anim.interpolate({
@@ -55,6 +69,11 @@ const TabBar: React.FC<BottomTabBarProps> = ({ state, descriptors, navigation })
     const text = (label: any, index: any)=>{
       return ( <Text headingType="h6" style={{ color: index === state.index ? '#0166DB' : '#201A1B', alignItems: 'center', marginTop: 3 }}>{label}</Text>)
     }
+    const selectedOption = (option) => {
+        navigation.navigate(option)
+        setSelectedValue(option)
+
+    }
     return (
         <RNView style={styles.navMainView}>
             <Animated.View
@@ -67,7 +86,7 @@ const TabBar: React.FC<BottomTabBarProps> = ({ state, descriptors, navigation })
                         <TouchableOpacity
                             key={route.key}
                             accessibilityRole="button"
-                            onPress={() => navigation.navigate(route.name)}
+                            onPress={() => selectedOption(route.name)}
                             style={styles.segment}
                         >
                             {icon(route, index)}
