@@ -8,7 +8,6 @@ import { globalScreens } from './screens';
 
 
 const Global = () => {
-    console.log(globalScreens, "global screens")
     const Stack = createNativeStackNavigator();
 
     let getInitialRoute = () => {

@@ -6,8 +6,6 @@
  */
 
 import React from 'react';
-
-import "react-native-devsettings";
 import { InitialContainer } from './InitialContainer';
 import { Text, View } from 'react-native';
 import { Provider } from 'react-redux';
