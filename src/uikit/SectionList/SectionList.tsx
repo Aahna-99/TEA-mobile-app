@@ -3,7 +3,7 @@ import {
     View,
     SectionList as RNSectionList,
 } from 'react-native';
-import { Separator } from 'uikit';
+import { Separator } from '..';
 import constColors from '../../utils/constants/constColors';
 import { sectionListStyles } from './SectionListStyles';
 

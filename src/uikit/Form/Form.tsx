@@ -3,7 +3,7 @@ import { View } from 'react-native';
 import { connect } from 'react-redux';
 import { SafeAreaView } from 'react-native';
 
-import { Icon, Screen, Text, Button } from 'uikit';
+import { Icon, Screen, Text, Button } from '..';
 
 import { NavigationRef } from '../../utils/navigation/NavigationRef';
 import { ICONS } from '../../utils/models/IconsType';

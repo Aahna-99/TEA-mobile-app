@@ -6,7 +6,7 @@ import {
     TouchableOpacity,
     Dimensions,
 } from 'react-native';
-import { Text } from 'uikit';
+import { Text } from '..';
 import { imageGridStyles as styles } from './ImageGridStyles.ts';
 
 const ImageGrid = (props: any) => {

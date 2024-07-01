@@ -3,9 +3,9 @@ import { View as RNView, StyleSheet } from 'react-native';
 import { storiesOf } from '@storybook/react-native';
 import { action } from '@storybook/addon-actions';
 import { select, boolean } from '@storybook/addon-knobs';
-import { Text, View, Media, Avatar, Icon, Card, Frame } from 'uikit';
-import constColors from 'utils/constants/constColors';
-import { ICONS } from 'utils/models/IconsType';
+import { Text, View, Media, Avatar, Icon, Card, Frame } from '..';
+import constColors from '../../utils/constants/constColors';
+import { ICONS } from '../../utils/models/IconsType';
 import { FlatList } from '.';
 import { flatListStyles } from './FlatListStyles';
 

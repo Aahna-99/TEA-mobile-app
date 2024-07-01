@@ -3,7 +3,7 @@ import { Linking, Alert, TouchableOpacity, Platform } from 'react-native';
 import { ActivityIndicator } from 'react-native-paper';
 import { InAppBrowser } from 'react-native-inappbrowser-reborn';
 
-import { View, Text, Icon } from 'uikit';
+import { View, Text, Icon } from '..';
 import { downloadFile } from '../../utils/hooks/downloadFile';
 import constColors from '../../utils/constants/constColors';
 import { ICONS } from '../../utils/models/IconsType';

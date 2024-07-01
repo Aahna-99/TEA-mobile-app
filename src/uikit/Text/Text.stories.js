@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react-native';
 import { action } from '@storybook/addon-actions';
 import { select, text, object } from '@storybook/addon-knobs';
 import { StyleSheet, View } from 'react-native';
-import { headingConst, fontWeightConst } from 'utils/constants/constTypography';
+import { headingConst, fontWeightConst } from '../../utils/constants/constTypography';
 
 import Text from '.';
 import Paragraph from '../Paragraph';

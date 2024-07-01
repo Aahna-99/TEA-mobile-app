@@ -3,7 +3,7 @@ import { View as RNView, Dimensions } from 'react-native';
 import { Chip } from 'react-native-paper';
 import { TabView as RNTabView } from 'react-native-tab-view';
 
-import { Icon, View, Text } from 'uikit';
+import { Icon, View, Text } from '..';
 
 import { fontWeightConst } from '../../utils/constants/constTypography';
 import constColors from '../../utils/constants/constColors';

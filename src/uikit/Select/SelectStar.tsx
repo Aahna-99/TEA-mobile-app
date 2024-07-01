@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { View, TouchableOpacity, Animated } from 'react-native';
 
-import { Icon } from 'uikit';
+import { Icon } from '..';
 
 import { ICONS } from '../../utils/models/IconsType';
 

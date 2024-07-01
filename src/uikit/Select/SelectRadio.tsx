@@ -3,10 +3,10 @@ import { View } from 'react-native';
 import { Option } from '../Option';
 import { FlatList } from '../FlatList';
 import { selectStyle } from './SelectStyle';
-import { TextInput, Icon } from 'uikit';
-import { debounce } from 'utils/hooks/debounce.ts';
-import constColors from 'utils/constants/constColors';
-import { ICONS } from 'utils/models/IconsType';
+import { TextInput, Icon } from '..';
+import { debounce } from '../../utils/hooks/debounce.ts';
+import constColors from '../../utils/constants/constColors';
+import { ICONS } from '../../utils/models/IconsType';
 interface Props {
     items: any;
     onPress: () => void;

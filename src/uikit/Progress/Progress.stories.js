@@ -3,7 +3,7 @@ import { Text, View } from 'react-native';
 
 import { storiesOf } from '@storybook/react-native';
 import { number, boolean, color, select, text } from '@storybook/addon-knobs';
-import constColors from 'utils/constants/constColors';
+import constColors from '../../utils/constants/constColors';
 
 import Progress from '.';
 

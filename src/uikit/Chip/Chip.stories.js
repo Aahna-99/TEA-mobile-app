@@ -11,8 +11,8 @@ import {
     select,
 } from '@storybook/addon-knobs';
 import { StyleSheet, View } from 'react-native';
-import { ICONS } from 'utils/models/IconsType.ts';
-import { constColors } from 'utils/constants/constColors.ts';
+import { ICONS } from '../../utils/models/IconsType.ts';
+import { constColors } from '../../utils/constants/constColors.ts';
 import Text from '../Text';
 import Icon from '../Icon';
 import Chip from '.';

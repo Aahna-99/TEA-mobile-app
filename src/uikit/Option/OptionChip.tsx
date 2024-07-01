@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { TouchableOpacity, View } from 'react-native';
 import { Chip } from 'react-native-paper';
 
-import { Icon, Text } from 'uikit';
+import { Icon, Text } from '..';
 
 import { ICONS } from '../../utils/models/IconsType';
 import constColors from '../../utils/constants/constColors';

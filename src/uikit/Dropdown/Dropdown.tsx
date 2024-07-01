@@ -1,7 +1,7 @@
 import React from 'react';
 import { TouchableOpacity, View } from 'react-native';
 
-import { Icon } from 'uikit';
+import { Icon } from '..';
 
 import { ICONS } from '../../utils/models/IconsType';
 import constColors from '../../utils/constants/constColors';

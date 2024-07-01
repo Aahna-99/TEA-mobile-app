@@ -6,7 +6,7 @@ import constColors from '../../utils/constants/constColors';
 
 import Text from '../Text/Text';
 import styles from './styles';
-import { SafeArea } from 'uikit';
+import { SafeArea } from '..';
 
 export default function Screen(props: any) {
     let {

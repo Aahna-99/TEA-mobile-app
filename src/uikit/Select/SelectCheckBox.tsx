@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { View, TouchableOpacity } from 'react-native';
-import { Text, TextInput, Icon } from 'uikit';
+import { Text, TextInput, Icon } from '..';
 import { Option } from '../Option';
 import { FlatList } from '../FlatList';
 import { selectStyle, checkBox } from './SelectStyle';

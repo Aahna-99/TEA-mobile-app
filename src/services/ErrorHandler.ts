@@ -1,74 +1,61 @@
-import { dispatch } from 'utils/navigation/NavigationRef';
 import { Alert } from 'react-native';
-// import UserPreference from 'config/UserPreferences';
+import { getStorageItem, deleteStorageItem, clearStorage } from '../utils/Storage';
+import { CommonActions, useNavigation } from '@react-navigation/native';
 
-const ErrorHandler = (NotificationContext: any, handler?: any) => {
-    const { desubscribeNotifications } = NotificationContext;
+// Function to log out the user
+const logOut = async () => {
+  deleteStorageItem('token');
+  clearStorage();
 
-    const logOut = async () => {
-        // await UserPreference.instance.removeUser();
-        // await UserPreference.instance.removeItem('TokenKey');
-        // await UserPreference.instance.clearPreference();
-        // await UserPreference.instance.clearDomain();
-        desubscribeNotifications();
-    };
-
-    const AsyncAlert = async () =>
-        new Promise((resolve, reject) => {
-            Alert.alert(
-                'Session Timeout',
-                'Your session expired. Please sign in again to continue',
-                [
-                    {
-                        text: 'OK',
-                        onPress: async () => {
-                            // const email =
-                            //     await UserPreference.instance.getEmail();
-                            // const domain =
-                            //     await UserPreference.instance.getDomain();
-                            // await logOut();
-                            // dispatch(0, 'Subdomain', {
-                            //     SubDomain: domain,
-                            //     Email: email,
-                            // });
-                        },
-                        style: 'default',
-                    },
-                ],
-            );
-            reject();
-        });
-
-    const errorObject = async errorResponse => {
-        let result;
-        try {
-            result = await errorResponse.json();
-        } catch (error) {
-            result = {
-                message: 'Something Went Wrong',
-            };
-        }
-        return result;
-    };
-
-    const errorhandler = async (error: any) => {
-        return new Promise(async (resolve, reject) => {
-            if (error.status == 401) {
-                let errorhandler = handler ? handler : AsyncAlert;
-
-                await errorhandler().catch((error: any) => reject(error));
-                reject();
-            } else if (!error.status.toString().startsWith('2')) {
-                let errorData = await errorObject(error);
-                reject(errorData);
-            }
-
-            resolve();
-        });
-    };
-    return {
-        errorhandler,
-    };
+  const navigation = useNavigation();
+  
+  // Navigate to login screen
+  navigation.dispatch(
+    CommonActions.reset({
+      index: 1,
+      routes: [
+        { name: 'Auth' },
+      ],
+    })
+  );
+  // navigation.dispatch(resetAction);
 };
 
-export default ErrorHandler;
+// Function to show an alert for session timeout
+const asyncAlert = async () =>
+  new Promise<void>((resolve) => {
+    Alert.alert(
+      'Session Timeout',
+      'Your session expired. Please sign in again to continue.',
+      [
+        {
+          text: 'OK',
+          onPress: async () => {
+            await logOut();
+            resolve();
+          },
+        },
+      ]
+    );
+  });
+
+// Function to parse the error response
+const parseErrorResponse = async (errorResponse: Response) => {
+  try {
+    return await errorResponse.json();
+  } catch {
+    return { message: 'Something Went Wrong' };
+  }
+};
+
+// Error handler function
+const errorHandler = async (errorResponse: Response): Promise<void> => {
+  if (errorResponse.status === 401) {
+    await asyncAlert();
+  } else if (!errorResponse.ok) {
+    const errorData = await parseErrorResponse(errorResponse);
+    throw new Error(errorData.message || 'Something went wrong');
+  }
+};
+
+export default errorHandler;

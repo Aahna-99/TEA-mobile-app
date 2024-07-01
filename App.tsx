@@ -9,23 +9,19 @@ import React from 'react';
 
 import "react-native-devsettings";
 import { InitialContainer } from './InitialContainer';
-import { Text, View } from 'react-native';
 import { Provider } from 'react-redux';
-import store from './src/processors/store';
-import "react-native-devsettings";
+import { store } from './src/processors/store';
+
+if (__DEV__) {
+  require("./ReactotronConfig");
+}
  
  
 function App(): React.JSX.Element {
 
   return (
-    // <View>
-    //   <Text>
-    //     hello world
-    //   </Text>
-    // </View>
     <Provider store={store}>
       <InitialContainer />
-      {/* <View><Text>Hey there</Text></View> */}
    </Provider>
   );
 }

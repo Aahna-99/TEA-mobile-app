@@ -11,8 +11,8 @@ import {
     radios,
 } from '@storybook/addon-knobs';
 import { StyleSheet, View } from 'react-native';
-import constColors from 'utils/constants/constColors';
-import { ICONS } from 'utils/models/IconsType.ts';
+import constColors from '../../utils/constants/constColors';
+import { ICONS } from '../../utils/models/IconsType.ts';
 import { Button } from './Button';
 import Text from '../Text';
 import Icon from '../Icon';

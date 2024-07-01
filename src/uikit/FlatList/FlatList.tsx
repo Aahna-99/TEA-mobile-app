@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, FlatList as RNFlatList } from 'react-native';
-import { Separator } from '../../uikit';
+import { Separator } from '..';
 import constColors from '../../utils/constants/constColors';
 import { flatListStyles } from './FlatListStyles';
 

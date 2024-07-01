@@ -3,14 +3,14 @@ import { storiesOf } from '@storybook/react-native';
 import { action } from '@storybook/addon-actions';
 import { select, text, color, object, boolean } from '@storybook/addon-knobs';
 import { StyleSheet, View } from 'react-native';
-import { headingConst, fontWeightConst } from 'utils/constants/constTypography';
+import { headingConst, fontWeightConst } from '../../utils/constants/constTypography';
 import Avatar from '../Avatar';
 import TextInput from '.';
-import { ICONS } from 'utils/models/IconsType.ts';
+import { ICONS } from '../../utils/models/IconsType.ts';
 import Icon from '../Icon';
 import { Button } from '../Button/Button';
-import { debounce } from 'utils/hooks/debounce.ts';
-import constColors from 'utils/constants/constColors';
+import { debounce } from '../../utils/hooks/debounce.ts';
+import constColors from '../../utils/constants/constColors';
 
 const handleClick = value => {
     console.log(value);

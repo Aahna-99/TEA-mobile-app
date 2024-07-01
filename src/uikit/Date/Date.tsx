@@ -3,7 +3,7 @@ import { Calendar } from 'react-native-calendars';
 
 import _isEmpty from 'lodash/isEmpty';
 
-import { Button, Text } from 'uikit';
+import { Button, Text } from '..';
 
 import constColors from '../../utils/constants/constColors';
 

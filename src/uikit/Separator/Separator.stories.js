@@ -3,11 +3,11 @@ import { View, StyleSheet } from 'react-native';
 import { storiesOf } from '@storybook/react-native';
 import { action } from '@storybook/addon-actions';
 import { boolean, color, select } from '@storybook/addon-knobs';
-import constColors from 'utils/constants/constColors';
+import constColors from '../../utils/constants/constColors';
 import Separator from '.';
 import Text from '../Text/Text';
 import Icon from '../Icon/Icon';
-import { ICONS } from 'utils/models/IconsType.ts';
+import { ICONS } from '../../utils/models/IconsType.ts';
 
 const separatorTypeOptions = {
     dot: 'dot',

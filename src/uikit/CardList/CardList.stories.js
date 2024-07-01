@@ -3,7 +3,7 @@ import { View, StyleSheet } from 'react-native';
 import { storiesOf } from '@storybook/react-native';
 import { action } from '@storybook/addon-actions';
 import { select, text } from '@storybook/addon-knobs';
-import constColors from 'utils/constants/constColors';
+import constColors from '../../utils/constants/constColors';
 import CardList from '.';
 import { Card } from '../Card';
 import Text from '../Text';

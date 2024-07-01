@@ -11,7 +11,7 @@ import Separator from '../Separator/Separator';
 import Icon from '../../../components/shared/Icon';
 // import Icon from 'react-native-vector-icons/FontAwesome5';
 import { ICONS } from '../../../models/IconsType';
-import constColors from 'utils/constants/constColors';
+import constColors from '../../utils/constants/constColors';
 
 storiesOf('Media', module)
     .addDecorator(story => (

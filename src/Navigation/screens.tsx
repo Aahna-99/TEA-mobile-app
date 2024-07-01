@@ -1,4 +1,5 @@
 import { HomeScreen } from "../modules/Home"
+import { LoginScreen, AuthScreen } from "../modules/Auth";
 import { NewsFeed } from "../modules/NewsFeed"
 import {More} from '../modules/More'
 import { Nav } from "./Nav"
@@ -45,7 +46,21 @@ const globalScreens = [
 
 ]
 
+const authScreens = [
+    {
+        name: 'Auth',
+        component: AuthScreen,
+        options: {headerShown: false}
+    },
+    {
+        name: 'Login',
+        component: LoginScreen,
+        options: {headerShown: false}
+    },
+];
+
 
 export  {
-    globalScreens
+    globalScreens,
+    authScreens
 }

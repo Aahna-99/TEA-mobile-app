@@ -7,7 +7,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { SvgFromUri } from 'react-native-svg';
 import Icon from '../Icon';
 
-import { Text } from 'uikit';
+import { Text } from '..';
 import constColors from '../../utils/constants/constColors';
 
 import {

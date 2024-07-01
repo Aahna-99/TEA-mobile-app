@@ -6,7 +6,7 @@ import { radios, select, boolean } from '@storybook/addon-knobs';
 
 import Icon from '../../../components/shared/Icon';
 import { ICONS } from '../../../models/IconsType';
-import constColors from 'utils/constants/constColors';
+import constColors from '../../utils/constants/constColors';
 
 import Media from '../Media';
 import Text from '../Text/Text';

@@ -1,11 +1,11 @@
 import React from 'react';
 import { View } from 'react-native';
-import { Button, Text } from 'uikit';
+import { Button, Text } from '..';
 import Field from './Field';
 
-import { NavigationRef } from 'utils/navigation/NavigationRef';
+import { NavigationRef } from '../../utils/navigation/NavigationRef';
 
-import constColors from 'utils/constants/constColors';
+import constColors from '../../utils/constants/constColors';
 
 const FieldSet = (props: any) => {
     let fieldSets = (fieldSet: { fields: any[] }) => (

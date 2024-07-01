@@ -11,8 +11,8 @@ import {
     color,
 } from '@storybook/addon-knobs';
 import { StyleSheet, View } from 'react-native';
-import { headingConst, fontWeightConst } from 'utils/constants/constTypography';
-import { ICONS } from 'utils/models/IconsType.ts';
+import { headingConst, fontWeightConst } from '../../utils/constants/constTypography';
+import { ICONS } from '../../utils/models/IconsType.ts';
 
 import Icon from '.';
 

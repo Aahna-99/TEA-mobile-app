@@ -3,10 +3,10 @@ import { View, StyleSheet, StatusBar } from 'react-native';
 import { storiesOf } from '@storybook/react-native';
 import { action } from '@storybook/addon-actions';
 import { select, boolean } from '@storybook/addon-knobs';
-import { Avatar, Card, Icon, Media, Chip, Text } from 'uikit';
+import { Avatar, Card, Icon, Media, Chip, Text } from '..';
 import { SectionList } from '.';
-import constColors from 'utils/constants/constColors';
-import { ICONS } from 'utils/models/IconsType';
+import constColors from '../../utils/constants/constColors';
+import { ICONS } from '../../utils/models/IconsType';
 import { sectionListStyles } from './SectionListStyles';
 
 const DATA = [

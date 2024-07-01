@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import { View, Screen, Icon, TextInput } from 'uikit';
+import { View, Screen, Icon, TextInput } from '..';
 
 import constColors from '../../utils/constants/constColors';
 

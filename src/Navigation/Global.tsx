@@ -1,53 +1,56 @@
+// File path: Global.tsx
+
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import React, {
-    createContext,
-    useState,
-} from 'react';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { NavigationRef } from '../utils/navigation/NavigationRef';
-import { globalScreens } from './screens';
-export const LoaderContext = createContext({
-    showLoader: () => {},
-    hideLoader: () => {},
-});
+import React, { useEffect, useState } from 'react';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { globalScreens, authScreens } from './screens';
+import { getStorageItem } from '../utils/Storage';
+import { useSelector, useDispatch } from 'react-redux';
+import { setAuthenticated } from '../processors/auth/authSlice';
+import { RootState } from '../processors/store';
 
 const Global = () => {
-    const [loading, setLoading] = useState(false);
+  const Stack = createNativeStackNavigator();
+  const isAuthenticated = useSelector((state: RootState) => state.auth.access_token !== '');
+  const dispatch = useDispatch();
 
-    console.log(globalScreens, "global screens")
-    const Stack = createNativeStackNavigator();
-    const showLoader = () => setLoading(true);
-    const hideLoader = () => setLoading(false);
-
-
-    let getInitialRoute = () => {
-        return 'HomeNav';
+  useEffect(() => {
+    const checkToken = async () => {
+      const token = getStorageItem('Token');
+      if (token) {
+        dispatch(setAuthenticated(true));
+      } else {
+        dispatch(setAuthenticated(false));
+      }
     };
 
-    let getScreens = (screen: any) => {
-        let props = {
-            ...screen,
-        };
+    checkToken();
+  }, [dispatch]);
 
-        return <Stack.Screen {...props} />;
+  const getScreens = (screen: any, index: any) => {
+    let props = {
+      ...screen,
     };
-    let screens = new Array();
 
-    screens?.push(globalScreens?.map((screen): any => getScreens(screen)));
+    return <Stack.Screen {...props} key={index} />;
+  };
 
-    return (
-        <SafeAreaProvider>
-             <LoaderContext.Provider value={{ showLoader, hideLoader }}>
-            <NavigationContainer ref={NavigationRef} >
-                <Stack.Navigator initialRouteName={getInitialRoute()}> 
-                    {screens}
-                </Stack.Navigator>
-            </NavigationContainer>
-            </LoaderContext.Provider>
-        </SafeAreaProvider>
-    );
+  const authScreensArray = authScreens.map((screen, index): any => getScreens(screen, index));
+  const globalScreensArray = globalScreens.map((screen, index): any => getScreens(screen, index));
+
+  return (
+    <SafeAreaProvider>
+      <NavigationContainer>
+        <Stack.Navigator
+          initialRouteName={isAuthenticated ? 'HomeNav' : 'Auth'}
+          screenOptions={{ headerTitle: '', headerStyle: { backgroundColor: '#0066DB' } }}
+        >
+          {isAuthenticated ? globalScreensArray : authScreensArray}
+        </Stack.Navigator>
+      </NavigationContainer>
+    </SafeAreaProvider>
+  );
 };
 
 export default Global;
