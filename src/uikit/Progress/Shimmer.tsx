@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, Animated } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
-import constColors from 'utils/constants/constColors';
+import constColors from '../../utils/constants/constColors';
 
 import styles from './styles';
 

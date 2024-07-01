@@ -3,7 +3,7 @@ import { View, TextInput as NativeInput, Platform } from 'react-native';
 import { TextInput as PaperInput } from 'react-native-paper';
 import { colorText, textStyles } from './TextInputStyle';
 import Text from '../Text';
-import constColors from 'utils/constants/constColors';
+import constColors from '../../utils/constants/constColors';
 
 function TextInput(props: any) {
     let {

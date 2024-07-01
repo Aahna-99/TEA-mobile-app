@@ -5,9 +5,9 @@ import { TabView as RNTabView } from 'react-native-tab-view';
 
 import { Icon, View, Text } from 'uikit';
 
-import { fontWeightConst } from 'utils/constants/constTypography';
-import constColors from 'utils/constants/constColors';
-import { ICONS } from 'utils/models/IconsType';
+import { fontWeightConst } from '../../utils/constants/constTypography';
+import constColors from '../../utils/constants/constColors';
+import { ICONS } from '../../utils/models/IconsType';
 
 import styles from './styles';
 import { ScrollView } from 'react-native-gesture-handler';

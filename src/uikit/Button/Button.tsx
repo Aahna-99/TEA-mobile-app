@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Button as RNButton, IconButton } from 'react-native-paper';
 import { TouchableHighlight, TouchableOpacity, View } from 'react-native';
-import { headingConst } from 'utils/constants/constTypography';
+import { headingConst } from '../../utils/constants/constTypography';
 import { underlay, buttonStyle } from './ButtonStyles';
 
 function Button(props: any) {

@@ -3,8 +3,8 @@ import { View, TouchableOpacity } from 'react-native';
 import { mainStyle, style } from './CheckboxRadioStyles';
 import Text from '../Text/Text';
 import Icon from '../Icon';
-import { headingConst } from 'utils/constants/constTypography';
-import { ICONS } from 'utils/models/IconsType.ts';
+import { headingConst } from '../../utils/constants/constTypography';
+import { ICONS } from '../../utils/models/IconsType.ts';
 
 interface Props {
     text: string;

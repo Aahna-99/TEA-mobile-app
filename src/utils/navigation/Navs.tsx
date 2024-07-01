@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Dimensions } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { SafeAreaView } from 'react-native';
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -98,10 +98,6 @@ export const TabNavigation = () => {
             <SafeAreaView style={[styles.header, styles[orientation]]} />
             <SafeAreaView style={[styles.mainHeader, styles[orientation]]}>
                 <Tab.Navigator
-                    tabBarOptions={{
-                        activeTintColor: AppColors.DarkBlue,
-                        inactiveTintColor: AppColors.Gray2,
-                    }}
                     tabBar={props => <TabBar {...props} />}>
                     <Tab.Screen
                         name="Home"

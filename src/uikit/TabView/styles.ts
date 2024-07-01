@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 
-import { headingConst } from 'utils/constants/constTypography';
-import constColors from 'utils/constants/constColors';
+import { headingConst } from '../../utils/constants/constTypography';
+import constColors from '../../utils/constants/constColors';
 
 const styles = StyleSheet.create({
     background: {

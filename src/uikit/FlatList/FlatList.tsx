@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, FlatList as RNFlatList } from 'react-native';
-import { Separator } from 'uikit';
-import constColors from 'utils/constants/constColors';
+import { Separator } from '../../uikit';
+import constColors from '../../utils/constants/constColors';
 import { flatListStyles } from './FlatListStyles';
 
 function FlatList(Props: any) {

@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 
 import { View, Screen, Icon, TextInput } from 'uikit';
 
-import constColors from 'utils/constants/constColors';
+import constColors from '../../utils/constants/constColors';
 
-import { NavigationRef } from 'utils/navigation/NavigationRef';
-import { debounce } from 'utils/hooks/debounce.ts';
-import { ICONS } from 'utils/models/IconsType';
+import { NavigationRef } from '../../utils/navigation/NavigationRef';
+import { debounce } from '../../utils/hooks/debounce.ts';
+import { ICONS } from '../../utils/models/IconsType';
 
 import styles from './styles';
 

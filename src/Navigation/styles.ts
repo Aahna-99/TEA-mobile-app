@@ -11,12 +11,12 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         backgroundColor: constColors.bgWhite,
         elevation: 2,
-        paddingVertical: 10,
+        paddingTop: 16,
     },
     segment: {
         flex: 1,
         alignItems: 'center',
-        marginVertical: 10,
+        marginVertical: 8,
     },
     header: {
         flex: 0,
@@ -54,9 +54,9 @@ const styles = StyleSheet.create({
     navMainView: {
         elevation: 5,
         borderColor: constColors.bgBorder,
-        shadowOffset: { width: 1, height: 1 },
+        shadowOffset: { width: 0, height: -5 },
         shadowOpacity: 0.05,
-        shadowRadius: 5,
+        shadowRadius: 3,
         position: 'relative',
         alignItems: 'center',
     },

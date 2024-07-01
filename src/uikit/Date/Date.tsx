@@ -5,7 +5,7 @@ import _isEmpty from 'lodash/isEmpty';
 
 import { Button, Text } from 'uikit';
 
-import constColors from 'utils/constants/constColors';
+import constColors from '../../utils/constants/constColors';
 
 const SingleMarking = props => {
     const [selected, setSelected] = useState(props.selected || '');

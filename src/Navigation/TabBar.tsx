@@ -79,7 +79,7 @@ const TabBar: React.FC<BottomTabBarProps> = ({ state, descriptors, navigation })
 
     }
     return (
-        <RNView style={styles.navMainView}>
+        <View style={styles.navMainView}>
             <Animated.View
                 style={[animStyle, styles.safeAreaViewStyle]}>
                 {state.routes.map((route, index) => {
@@ -99,7 +99,7 @@ const TabBar: React.FC<BottomTabBarProps> = ({ state, descriptors, navigation })
                     );
                 })}
             </Animated.View>
-        </RNView>
+        </View>
     );
 };
 
