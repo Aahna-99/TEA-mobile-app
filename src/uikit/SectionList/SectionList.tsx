@@ -4,7 +4,7 @@ import {
     SectionList as RNSectionList,
 } from 'react-native';
 import { Separator } from 'uikit';
-import constColors from 'utils/constants/constColors';
+import constColors from '../../utils/constants/constColors';
 import { sectionListStyles } from './SectionListStyles';
 
 interface Props {

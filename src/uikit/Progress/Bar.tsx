@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View, Animated, Text } from 'react-native';
 
-import constColors from 'utils/constants/constColors';
+import constColors from '../../utils/constants/constColors';
 
 import { ColorMap } from './colorMap';
 

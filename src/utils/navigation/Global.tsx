@@ -7,14 +7,14 @@ import React, {
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NavigationContainer } from '@react-navigation/native';
 
-import { globalScreens, initialRouteName } from 'utils/navigation/screens';
+import { globalScreens, initialRouteName } from '../../utils/navigation/screens';
 import GlobalLoader from './globalLoader';
 
 import { NavigationRef } from './NavigationRef';
 import { Stack } from './config';
 
 import { UserPreference } from 'config';
-import useTranslations from 'utils/hooks/useTranslations';
+import useTranslations from '../../utils/hooks/useTranslations';
 
 export const LoaderContext = createContext({
     showLoader: () => {},

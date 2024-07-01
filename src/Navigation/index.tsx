@@ -1,2 +1,3 @@
 import Global from './Global';
-export { Global };
+import { globalScreens } from './screens';
+export { Global, globalScreens };

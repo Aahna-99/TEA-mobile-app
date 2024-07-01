@@ -5,9 +5,9 @@ import { SafeAreaView } from 'react-native';
 
 import { Icon, Screen, Text, Button } from 'uikit';
 
-import { NavigationRef } from 'utils/navigation/NavigationRef';
-import { ICONS } from 'utils/models/IconsType';
-import constColors from 'utils/constants/constColors';
+import { NavigationRef } from '../../utils/navigation/NavigationRef';
+import { ICONS } from '../../utils/models/IconsType';
+import constColors from '../../utils/constants/constColors';
 
 import { FieldSet } from './FieldSet';
 

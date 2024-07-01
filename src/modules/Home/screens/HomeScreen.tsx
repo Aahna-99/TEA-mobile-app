@@ -1,12 +1,14 @@
 import React from "react";
 import { Text, View } from "react-native";
-
+import Screen  from "../../../uikit/Screen";
 export const HomeScreen = () => {
     return(
-        <View>
-            <Text>
-                home screen here
-            </Text>
-        </View>
+        <Screen
+        mode={2}
+        title={ 'Home'}
+
+        paddingBottom={false}
+        paddingTop={false}
+    />
     )
 }

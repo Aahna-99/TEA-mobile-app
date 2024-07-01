@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { TouchableOpacity, View } from 'react-native';
 import { Avatar as PaperAvatar } from 'react-native-paper';
 import VectorIcon from 'react-native-vector-icons/FontAwesome5';
-import AsyncStorage from '@react-native-community/async-storage';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import { SvgFromUri } from 'react-native-svg';
 import Icon from '../Icon';
 
 import { Text } from 'uikit';
-import constColors from 'utils/constants/constColors';
+import constColors from '../../utils/constants/constColors';
 
 import {
     avatarStyles,
@@ -17,7 +17,7 @@ import {
     dynamicColor,
 } from './AvatarStyles';
 import Shimmer from '../Progress/Shimmer';
-import { ICONS } from 'utils/models/IconsType.ts';
+import { ICONS } from '../../utils/models/IconsType.ts';
 
 function Avatar(props: any) {
     let {

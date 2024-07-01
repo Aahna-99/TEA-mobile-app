@@ -4,7 +4,7 @@ import Snackbar from 'react-native-snackbar';
 
 // import UserPreference from 'config/UserPreferences';
 
-import { IHttpResponse } from 'utils/interfaces/IHttpResponse';
+import { IHttpResponse } from '../utils/interfaces/IHttpResponse';
 // import { getAppInsights } from './TelemetryService';
 import ErrorHandler from './ErrorHandler';
 import store from '../processors/store';

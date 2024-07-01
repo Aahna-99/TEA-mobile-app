@@ -3,9 +3,9 @@ import { View, TouchableOpacity, Animated } from 'react-native';
 
 import { Icon } from 'uikit';
 
-import { ICONS } from 'utils/models/IconsType';
+import { ICONS } from '../../utils/models/IconsType';
 
-import constColors from 'utils/constants/constColors';
+import constColors from '../../utils/constants/constColors';
 
 import { Star as styles } from './SelectStyle';
 

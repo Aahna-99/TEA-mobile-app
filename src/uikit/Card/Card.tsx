@@ -1,7 +1,7 @@
 import React from 'react';
 import { ImageBackground, TouchableOpacity } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import constColors from 'utils/constants/constColors';
+import constColors from '../../utils/constants/constColors';
 import { cardStyles } from './CardStyles';
 import { View } from '../View';
 import backdropImages from '../../utils/constants/constBackdropImages';

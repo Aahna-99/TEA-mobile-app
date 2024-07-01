@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import constColors from 'utils/constants/constColors';
+import constColors from '../../utils/constants/constColors';
 
 const colorText = {
     placeholder: constColors.textPlaceholder,

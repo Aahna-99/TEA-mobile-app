@@ -3,8 +3,8 @@ import { TouchableOpacity, View } from 'react-native';
 import { createIconSetFromFontello } from 'react-native-vector-icons';
 import fontelloConfig from '../../utils/assets/Engagedly-Icons-config.json';
 import { iconStyles, colorConst } from './IconStyles';
-import { ICONS_SVG, ICONS } from 'utils/models/IconsType';
-import { iconSize } from 'utils/constants/constSizes';
+import { ICONS_SVG, ICONS } from '../../utils/models/IconsType';
+import { iconSize } from '../../utils/constants/constSizes';
 import Shimmer from '../Progress/Shimmer';
 
 function Icon(props: any) {

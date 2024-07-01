@@ -3,7 +3,7 @@ import { View as RNView } from 'react-native';
 
 import { Separator, Avatar, Media, Card } from 'uikit';
 
-import constColors from 'utils/constants/constColors';
+import constColors from '../../utils/constants/constColors';
 import { loaderStyles as styles } from './LoaderStyles';
 
 function ShimmerLoader(props: any) {

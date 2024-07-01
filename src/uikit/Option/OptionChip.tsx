@@ -4,8 +4,8 @@ import { Chip } from 'react-native-paper';
 
 import { Icon, Text } from 'uikit';
 
-import { ICONS } from 'utils/models/IconsType';
-import constColors from 'utils/constants/constColors';
+import { ICONS } from '../../utils/models/IconsType';
+import constColors from '../../utils/constants/constColors';
 
 import { optionStyle } from './OptionChipStyles';
 
