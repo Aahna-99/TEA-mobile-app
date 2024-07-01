@@ -6,7 +6,7 @@ import Like from '../assets/drawables/Like_Active.svg';
 import Apps from '../assets/drawables/Apps_Active.svg';
 import Awful from '../assets/drawables/Awful_Active.svg';
 import Comment from '../assets/drawables/Comment_Active.svg';
-import Directory from '../assets/drawables/Directory_Active.svg';
+import Directory2 from '../assets/drawables/Directory_Active.svg';
 import Great from '../assets/drawables/Great_Active.svg';
 import GrowthActive from '../assets/drawables/Growth_Active.svg';
 import Happy from '../assets/drawables/Happy_Active.svg';
@@ -111,6 +111,9 @@ import RefreshIcon from '../assets/drawables/Refresh_Icon.svg';
 import ExploreFilters from '../assets/drawables/Explore_Filters.svg';
 import LearningV2 from '../assets/drawables/LearningV2.svg';
 
+import Directory from '../assets/drawables/Directory_Icon.svg'
+import Explore from '../assets/drawables/Explore_Icon.svg'
+
 const ICONS_SVG = {
     home_active: Home,
     activity_active: Activity,
@@ -120,7 +123,7 @@ const ICONS_SVG = {
     apps_active: Apps,
     awful_active: Awful,
     comment_active: Comment,
-    directory_active: Directory,
+    directory_active: Directory2,
     great_active: Great,
     growth_active: GrowthActive,
     happy_active: Happy,
@@ -222,6 +225,8 @@ const ICONS_SVG = {
     ExploreFilters: ExploreFilters,
     DownloadCircle: DownloadCircle,
     LearningV2: LearningV2,
+    Directory: Directory,
+    Explore: Explore
 };
 
 const enum ICONS {
@@ -247,7 +252,7 @@ const enum ICONS {
     CLOSE = 'close',
     COMMENT = 'comment',
     COPY = 'copy',
-    DIRECTORY = 'directory',
+    DIRECTORY2 = 'directory2',
     DOWNLOAD = 'download',
     DownloadCircle = 'DownloadCircle',
     EDIT = 'edit',
@@ -445,6 +450,9 @@ const enum ICONS {
     ExploreFilters = 'ExploreFilters',
     PartiallyActiveStar = 'PartiallyActiveStar',
     LearningV2 = 'LearningV2',
+    Directory='Directory',
+    Explore ="Explore"
+
 }
 
 export { ICONS, ICONS_SVG };

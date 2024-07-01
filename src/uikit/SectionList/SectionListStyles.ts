@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import constColors from 'utils/constants/constColors';
+import constColors from '../../utils/constants/constColors';
 
 const sectionListStyles = StyleSheet.create({
     wrapperStyle: { flex: 1, margin: 16 },

@@ -1,4 +1,4 @@
-import constColors from 'utils/constants/constColors';
+import constColors from '../../utils/constants/constColors';
 
 export const ColorMap = {
     Global: {

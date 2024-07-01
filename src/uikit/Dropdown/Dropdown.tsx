@@ -3,8 +3,8 @@ import { TouchableOpacity, View } from 'react-native';
 
 import { Icon } from 'uikit';
 
-import { ICONS } from 'utils/models/IconsType';
-import constColors from 'utils/constants/constColors';
+import { ICONS } from '../../utils/models/IconsType';
+import constColors from '../../utils/constants/constColors';
 
 import styles from './styles';
 

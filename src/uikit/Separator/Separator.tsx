@@ -1,6 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-import constColors from 'utils/constants/constColors';
+import constColors from '../../utils/constants/constColors';
 import { separatorStyles } from './SeparatorStyles';
 
 interface Props {

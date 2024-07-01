@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
-import constColors from 'utils/constants/constColors';
-import { headingConst } from 'utils/constants/constTypography';
+import constColors from '../../utils/constants/constColors';
+import { headingConst } from '../../utils/constants/constTypography';
 
 const selectStyle = StyleSheet.create({
     parentHorizontal: {

@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
-import constColors from 'utils/constants/constColors';
-import { headingConst, fontWeightConst } from 'utils/constants/constTypography';
+import constColors from '../../utils/constants/constColors';
+import { headingConst, fontWeightConst } from '../../utils/constants/constTypography';
 
 const headingStyles = {
     h1: {

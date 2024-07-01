@@ -1,5 +1,5 @@
 import React from 'react';
-import constColors from 'utils/constants/constColors';
+import constColors from '../../utils/constants/constColors';
 import Shimmer from '../Progress/Shimmer';
 import Text from '../Text';
 import { View } from '../View';

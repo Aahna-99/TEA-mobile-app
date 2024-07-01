@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import { Text, View } from "react-native";
-
+import Screen  from "../../../uikit/Screen";
 export const HomeScreen = () => {
 
     useEffect(()=>{
+        
         
     })
 
@@ -19,7 +20,7 @@ export const HomeScreen = () => {
     return(
         <Screen
             mode={2}
-            title={'NewsFeed'}
+            title={'HomeScreen'}
             renderContent={renderContent}
             // navigationAction={navigationAction}
             // actionButtons={actionButtons}

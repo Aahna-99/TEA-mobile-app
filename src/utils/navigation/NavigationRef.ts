@@ -22,6 +22,7 @@ export function dispatch(index: number, name: string, params: object = {}) {
         );
     });
 }
+// const retry = null
 
 /*
  This function is to retry the navigation when the NavigaitonRef component didn't finish
@@ -32,7 +33,7 @@ export function dispatch(index: number, name: string, params: object = {}) {
  this fix is for this issue reported in jira: https://engagedly.atlassian.net/browse/EMD-800
 */
 function navRetry(navFunction: () => void) {
-    const operation = retry.operation({
+    const operation = retry?.operation({
         retries: 7,
         minTimeout: 300,
         maxTimeout: 2000,

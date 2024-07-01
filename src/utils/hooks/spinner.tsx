@@ -3,7 +3,7 @@ import { View } from 'react-native';
 import styled from 'styled-components/native';
 
 import AppColors from '../../../config/AppColors';
-import constColors from 'utils/constants/constColors';
+import constColors from '../../utils/constants/constColors';
 
 const StyledSpinner = styled.ActivityIndicator`
     align-items: center;

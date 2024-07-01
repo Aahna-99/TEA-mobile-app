@@ -10,6 +10,7 @@ import { InitialContainer } from './InitialContainer';
 import { Text, View } from 'react-native';
 import { Provider } from 'react-redux';
 import store from './src/processors/store';
+import "react-native-devsettings";
  
  
 function App(): React.JSX.Element {
@@ -22,6 +23,7 @@ function App(): React.JSX.Element {
     // </View>
     <Provider store={store}>
       <InitialContainer />
+      {/* <View><Text>Hey there</Text></View> */}
    </Provider>
   );
 }
